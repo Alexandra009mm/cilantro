@@ -1,7 +1,6 @@
-from menu import menu
 info_sales = []
 general_total = []  #ejercicio 4
-activo = 'yes'
+
 
 def show_general_balance():
     total = 0
@@ -12,7 +11,9 @@ def show_general_balance():
     print(total)
  
 def register():
+    activo = "yes"
     while activo == "yes":
+
         print("--------------------------------------------------")
         product_name = input("please enter the product name =>   ")
         print("--------------------------------------------------")
@@ -55,4 +56,4 @@ def register():
 
         general_total.append(total)
         activo = input("do you want to make another sale? yes/no ").lower() 
-       
+    
