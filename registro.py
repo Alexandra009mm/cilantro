@@ -1,4 +1,4 @@
-info_sales = []
+inventory = []
 general_total = []  #ejercicio 4
 
 
@@ -22,13 +22,13 @@ def register():
         quantity = int(input('what is the amount?=>              '))
         total = price * quantity 
 
-        diccionario = {
+        product = {
             "product name": product_name,
             "price": price,
            "quantity": quantity
         } 
 
-        info_sales.append(diccionario)
+        inventory.append(product)
        
 
         if total > 10000:

@@ -1,4 +1,4 @@
-from registro import register, general_total, show_general_balance, info_sales
+from registro import register, general_total, show_general_balance, inventory
 
 def menu():
 
@@ -7,9 +7,9 @@ def menu():
         print(" ")
         print("\n---------𝐌ENU----------")
         print(" ")
-        print("1. Enter register a sales => ")
-        print("2. show total sales =>  ")
-        print("3. show history => ")
+        print("1. Add product => ")
+        print("2. Calculate statistics =>")
+        print("3. Show inventory => ")
         print("4. Exit => ")
         print(" ")
         option = input("enter your option: ")
@@ -21,13 +21,21 @@ def menu():
             show_general_balance()
 
         elif option == "3":
-             print(info_sales)
+            if inventory== None:
+                  print("The inventory is empty")
+            
+            else:
+                print("\n ===============𝐈𝐍𝐕𝐄𝐍𝐓𝐎𝐑𝐘=============== \n")
+                for i in inventory:
+                    print(f"Product name: {i['product_name']} | price: {i['price']} |   quantity: {i['quantity']}")
+                    print("\n" + "=" * 41)
             
         elif option == "4":
              act = False
              print("Thanks you for use \n ----The register sales----\n")
     
-        elif option != "1" or "2" or "3" or "4": 
-            print("Enter: 1, 2 or 3. Try again =>    ")
+        else:
+            print("Enter: 1, 2, 3 or 4. Try again =>    ")
             continue
+
 
